@@ -19,7 +19,7 @@ texts_cache_path = "cached_texts.pkl"
 llm = Ollama(model='llama3', callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]))
 print(f"Initialized model: {llm.model}")
 
-# Function to clear cache files (if needed)
+# Clear cache files (if needed)
 def clear_cache():
     if os.path.exists(embeddings_cache_path):
         os.remove(embeddings_cache_path)
